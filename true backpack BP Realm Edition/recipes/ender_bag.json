@@ -1,0 +1,27 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ender_bag"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "BBB",
+      "BAB",
+      "BBB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:ender_eye"
+      },
+      "B":{
+          "item":"minecraft:obsidian"
+      }
+    },
+    "result": {
+      "item": "true:ender_bag"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.water_bucket": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"water": "q.is_item_name_any('slot.inventory',0,'minecraft:water_bucket')"
+						},
+                        {
+							"no_water": "!q.is_item_name_any('slot.inventory',0,'minecraft:water_bucket')"
+						}
+					]
+				},
+				"water": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+                        "/event entity @e[r=0.1] water_bucket_on"
+					]
+				},
+                "no_water": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+                        "/event entity @e[r=0.1] water_bucket_off"
+					]
+				}
+			}
+		},
+        "controller.animation.lava_bucket": {
+			"states": {
+				"default": {
+					"transitions": [
+                        {
+							"lava": "q.is_item_name_any('slot.inventory',0,'minecraft:lava_bucket')"
+						},
+                        {
+							"no_lava": "!q.is_item_name_any('slot.inventory',0,'minecraft:lava_bucket')"
+						}
+					]
+				},
+                "lava": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+                        "/event entity @e[r=0.1] lava_bucket_on",
+						"/setblock ~ ~ ~ light_block 7 keep",
+						"/fill ~4 ~1 ~4 ~-4 ~4 ~-4 air 0 replace light_block 7",
+						"/fill ~4 ~-1 ~4 ~-4 ~-2 ~-4 air 0 replace light_block 7",
+						"/fill ~4 ~ ~4 ~1 ~ ~1 air 0 replace light_block 7",
+						"/fill ~-4 ~ ~-4 ~-1 ~ ~-1 air 0 replace light_block 7",
+						"/fill ~4 ~ ~-4 ~1 ~ ~-1 air 0 replace light_block 7",
+						"/fill ~-4 ~ ~4 ~-1 ~ ~1 air 0 replace light_block 7",
+						"/fill ~-4 ~ ~ ~-1 ~ ~ air 0 replace light_block 7",
+						"/fill ~4 ~ ~ ~1 ~ ~ air 0 replace light_block 7",
+						"/fill ~ ~ ~-4 ~ ~ ~-1 air 0 replace light_block 7",
+						"/fill ~ ~ ~4 ~ ~ ~1 air 0 replace light_block 7"
+					]
+				},
+                "no_lava": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					],
+					"on_entry": [
+                        "/event entity @e[r=0.1] lava_bucket_off",
+						"/fill ~4 ~4 ~4 ~-4 ~-2 ~-4 air 0 replace light_block 7"
+					]
+				}
+			}
+		}
+	}
+}

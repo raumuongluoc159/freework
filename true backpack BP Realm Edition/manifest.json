@@ -1,0 +1,37 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "§dTrue backpack BP",
+		"description": "Version 1.10 Realm Edition",
+		"uuid": "094787be-1924-4836-bddb-ed04409a21a6",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			17,
+			0
+		]
+	},
+	"modules": [
+		{
+			"description": "Version 1.10 Realm Edition",
+			"type": "data",
+			"uuid": "3b27b5f2-d417-4d62-9026-ee71c8f8c2b8",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"1.8.4"
+			]
+		}
+	}
+}

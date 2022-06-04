@@ -1,0 +1,30 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "true_backpack"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "BAB",
+      "ACA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:leather"
+      },
+      "B": {
+        "item": "minecraft:string"
+      },
+      "C":{
+        "item":"minecraft:chest"
+      }
+    },
+    "result": {
+      "item": "true:backpack_item"
+    }
+  }
+}

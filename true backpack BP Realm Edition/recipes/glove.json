@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "true_glove"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " A ",
+      "A A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:leather"
+      }
+    },
+    "result": {
+      "item": "true:glove"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.no_box": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "no_box": "query.is_riding"
+                        },
+                        {
+                            "si_box": "!query.is_riding"
+                        }
+                    ]
+                },
+                "no_box": {
+                    "transitions": [
+                        {
+                            "default": "(1.0)"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s no_box"
+                    ]
+                },
+                "si_box": {
+                    "transitions": [
+                        {
+                            "default": "(1.0)"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s si_box",
+                        "/tag @p remove BACKPACK"
+                    ]
+                }
+            }
+        }
+    }
+}
